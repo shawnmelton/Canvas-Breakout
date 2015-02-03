@@ -1,0 +1,38 @@
+$opacityTransition: opacity 1s ease-in-out;
+
+html {
+    font-family: helvetica, arial;
+    font-size: 14px;
+    font-weight: 100;
+    color: #ccc;
+    background: #333;
+    background-attachment: fixed;
+}
+    body {
+       margin: 0;
+       position: relative;
+    }
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 50px;
+            line-height: 50px;
+            width: 200px;
+            text-align: center;
+            margin: -25px 0 0 -100px;
+            font-size: 150%;
+            opacity: 1.0;
+
+            -webkit-transition: $opacityTransition;
+            -moz-transition: $opacityTransition;
+            -ms-transition: $opacityTransition;
+            -o-transition: $opacityTransition;
+            transition: $opacityTransition;
+        }
+
+        footer {
+            padding: 20px 15px;
+            text-align: center;
+            color: #777;
+        }
