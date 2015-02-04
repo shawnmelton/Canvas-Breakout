@@ -1,5 +1,5 @@
-define(['libs/domReady'], function(domReady){
+define(['libs/domReady', 'libs/game'], function(domReady, Game){
     domReady(function() {
-        // Run App!
+        Game.start();
     });
 });
