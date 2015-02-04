@@ -36,6 +36,10 @@ define([], function() {
                 },
                 ball: {
                     size: browser.height * 0.02
+                },
+                block: {
+                    width: browser.width / 12,
+                    height: browser.height * 0.036
                 }
             };
 

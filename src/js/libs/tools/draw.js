@@ -30,7 +30,7 @@ define(['libs/elements/canvas', 'libs/tools/gradientBuilder'], function(Canvas, 
         },
 
         // Draw a rectangle on the canvas
-        rectangle: function(x, y, w, h, fillStyle) {
+        rectangle: function(x, y, w, h, fillStyle, strokeStyle) {
             var rectangle = this.start2d();
             rectangle.rect(x, y, w, h);
 
@@ -40,6 +40,12 @@ define(['libs/elements/canvas', 'libs/tools/gradientBuilder'], function(Canvas, 
 
             rectangle.fillStyle = fillStyle;
             rectangle.fill();
+
+            if(typeof strokeStyle === 'string' && strokeStyle !== '') {
+                rectangle.strokeStyle = strokeStyle;
+                rectangle.stroke();
+            }
+
             return rectangle;
         },
 

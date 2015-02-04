@@ -24,7 +24,7 @@ define([], function() {
         },
 
         radial: function(x, y, radius, context, colorArr) {
-            var gradient = context.createRadialGradient(x + radius, y + radius, 0, x + (radius * 1.2), y + (radius * 1.2), radius);
+            var gradient = context.createRadialGradient(x + (radius * 0.5), y + (radius * 0.5), 0, x, y, radius);
             return this.addStops(gradient, colorArr);
         }
     };

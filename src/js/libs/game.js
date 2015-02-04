@@ -11,8 +11,10 @@ define([
     'libs/elements/canvas',
     'libs/elements/paddle',
     'libs/elements/ball',
-    'libs/tools/guidelines'
-], function(Canvas, Paddle, Ball, Guidelines) {
+    'libs/elements/blocks',
+    'libs/tools/guidelines',
+    'libs/events/events'
+], function(Canvas, Paddle, Ball, Blocks, Guidelines, Events) {
     var Game = function() {};
     Game.prototype = {
         start: function() {
@@ -22,6 +24,9 @@ define([
             Canvas.render();
             Paddle.render();
             Ball.render();
+            Blocks.render();
+
+            Events.listen();
         }
     };
 
